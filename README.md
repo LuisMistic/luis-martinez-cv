@@ -8,7 +8,7 @@ Landing curriculum estatica para presentar el perfil full stack de Luis Sebastia
 - `styles.css`: diseno responsive.
 - `script.js`: menu mobile y respaldo de imagen.
 - `assets/foto-luis.png`: foto principal.
-- `assets/LuisCV-original.pdf`: CV PDF original enlazado desde la landing.
+- `assets/Luis-Martinez-CV.pdf`: CV compacto enlazado desde la landing.
 
 ## Deploy
 
