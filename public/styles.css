@@ -21,6 +21,11 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id],
+[id="inicio"] {
+  scroll-margin-top: 96px;
+}
+
 body {
   margin: 0;
   background:
@@ -539,8 +544,14 @@ h3 {
 
 .project-card.featured.warm {
   background:
-    linear-gradient(135deg, rgba(170, 95, 68, 0.94), rgba(22, 32, 29, 0.9)),
-    url("./assets/foto-luis.png");
+    linear-gradient(135deg, rgba(170, 95, 68, 0.95), rgba(22, 32, 29, 0.92)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06) 0,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 18px
+    );
   background-position: center;
 }
 
@@ -671,6 +682,11 @@ h3 {
 }
 
 @media (max-width: 900px) {
+  section[id],
+  [id="inicio"] {
+    scroll-margin-top: 88px;
+  }
+
   .menu-button {
     display: grid;
   }
@@ -728,6 +744,11 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  section[id],
+  [id="inicio"] {
+    scroll-margin-top: 82px;
+  }
+
   .nav,
   .hero,
   .section,
