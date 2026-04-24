@@ -384,11 +384,11 @@ h3 {
 }
 
 .avatar {
-  width: 190px;
-  height: 190px;
+  width: 204px;
+  height: 204px;
   margin: 0 auto;
   object-fit: cover;
-  object-position: center 26%;
+  object-position: center 34%;
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.82);
   box-shadow: 0 12px 28px rgba(22, 32, 29, 0.16);
@@ -802,8 +802,8 @@ h3 {
   }
 
   .avatar {
-    width: 168px;
-    height: 168px;
+    width: 178px;
+    height: 178px;
   }
 
   .project-card.featured {
