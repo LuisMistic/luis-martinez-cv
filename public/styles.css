@@ -1222,7 +1222,7 @@ h3 {
 
 .portfolio-cv .hero {
   width: 100%;
-  padding: clamp(20px, 4vw, 40px) 0 72px;
+  padding: clamp(8px, 2vw, 18px) 0 60px;
 }
 
 .portfolio-cv .hero-grid {
@@ -1246,7 +1246,7 @@ h3 {
 }
 
 .portfolio-cv .hero::before {
-  inset: 34px auto auto 28px;
+  inset: 18px auto auto 28px;
   z-index: -2;
   max-width: 760px;
   color: rgba(171, 230, 221, 0.08);
@@ -1262,19 +1262,13 @@ h3 {
 }
 
 .portfolio-cv .hero-copy {
-  padding: 34px 0 0 34px;
+  padding: 14px 0 0 34px;
   color: #fff;
   position: relative;
 }
 
 .portfolio-cv .hero-copy::before {
-  content: "";
-  position: absolute;
-  inset: 8px 44px 10px -18px;
-  z-index: -1;
-  border-radius: 28px;
-  background: linear-gradient(90deg, rgba(9, 18, 18, 0.34), rgba(9, 18, 18, 0.12) 70%, rgba(9, 18, 18, 0));
-  pointer-events: none;
+  content: none;
 }
 
 .portfolio-cv .eyebrow {
@@ -1376,7 +1370,7 @@ h3 {
 
 .portfolio-cv .hero-panel {
   width: min(100%, 328px);
-  margin-top: 28px;
+  margin-top: 12px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   box-shadow: 0 24px 60px rgba(10, 18, 18, 0.18);
@@ -1449,7 +1443,7 @@ h3 {
 @media (max-width: 900px) {
   .portfolio-cv .hero {
     min-height: auto;
-    padding-bottom: 64px;
+    padding-bottom: 56px;
   }
 
   .portfolio-cv .hero-grid {
@@ -1464,11 +1458,7 @@ h3 {
   }
 
   .portfolio-cv .hero-copy {
-    padding: 26px 20px 0;
-  }
-
-  .portfolio-cv .hero-copy::before {
-    inset: 6px 12px 10px 0;
+    padding: 18px 20px 0;
   }
 
   .portfolio-cv .hero-panel {
