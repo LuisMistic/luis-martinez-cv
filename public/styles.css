@@ -322,6 +322,98 @@ h3 {
   gap: 12px;
 }
 
+.focus-switcher {
+  margin-top: 26px;
+  display: grid;
+  gap: 10px;
+}
+
+.switcher-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.segmented-control {
+  width: fit-content;
+  max-width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(221, 216, 204, 0.92);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(22, 32, 29, 0.06);
+}
+
+.segment {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.segment.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.focus-panels {
+  position: relative;
+  margin-top: 18px;
+}
+
+.focus-panel {
+  display: none;
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 245, 238, 0.92));
+  border: 1px solid rgba(221, 216, 204, 0.92);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(22, 32, 29, 0.08);
+}
+
+.focus-panel.is-active {
+  display: block;
+}
+
+.focus-kicker {
+  margin: 0 0 8px;
+  color: var(--clay);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.focus-panel h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.focus-panel p {
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.focus-points {
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: var(--ink);
+}
+
+.focus-points li + li {
+  margin-top: 7px;
+}
+
 .button {
   min-height: 48px;
   display: inline-flex;
@@ -502,6 +594,12 @@ h3 {
   margin-bottom: 28px;
 }
 
+.section-intro {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
 .timeline {
   display: grid;
   gap: 18px;
@@ -604,6 +702,36 @@ h3 {
 .project-card.featured p,
 .project-card.featured .project-tag {
   color: rgba(255, 255, 255, 0.82);
+}
+
+.case-meta {
+  width: 100%;
+  margin: 0 0 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.case-meta div {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+}
+
+.case-meta dt {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-meta dd {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .project-card h3 {
@@ -825,6 +953,15 @@ h3 {
     width: 100%;
   }
 
+  .segmented-control {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .segment {
+    flex: 1 1 100%;
+  }
+
   .metric-grid,
   .project-featured-grid,
   .project-support-grid,
@@ -840,6 +977,10 @@ h3 {
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .case-meta {
+    grid-template-columns: 1fr;
   }
 
   .avatar {

@@ -2,6 +2,8 @@ const header = document.querySelector(".site-header");
 const menuButton = document.querySelector(".menu-button");
 const avatar = document.querySelector(".avatar");
 const revealItems = document.querySelectorAll(".reveal-item");
+const focusTriggers = document.querySelectorAll("[data-focus-trigger]");
+const focusPanels = document.querySelectorAll("[data-focus-panel]");
 
 if (menuButton && header) {
   menuButton.addEventListener("click", () => {
@@ -47,5 +49,25 @@ if (revealItems.length) {
   revealItems.forEach((item, index) => {
     item.style.transitionDelay = `${Math.min(index * 40, 220)}ms`;
     observer.observe(item);
+  });
+}
+
+if (focusTriggers.length && focusPanels.length) {
+  const setFocus = (focus) => {
+    focusTriggers.forEach((trigger) => {
+      const isActive = trigger.dataset.focusTrigger === focus;
+      trigger.classList.toggle("is-active", isActive);
+      trigger.setAttribute("aria-selected", String(isActive));
+    });
+
+    focusPanels.forEach((panel) => {
+      panel.classList.toggle("is-active", panel.dataset.focusPanel === focus);
+    });
+  };
+
+  focusTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      setFocus(trigger.dataset.focusTrigger);
+    });
   });
 }
