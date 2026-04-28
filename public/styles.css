@@ -859,6 +859,81 @@ h3 {
   margin: 0;
 }
 
+@media (min-width: 1025px) {
+  html {
+    scroll-padding-top: 96px;
+  }
+
+  section[id],
+  [id="inicio"] {
+    scroll-margin-top: 96px;
+  }
+
+  .hero,
+  .section {
+    min-height: calc(100svh - 84px);
+  }
+
+  .section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    align-content: center;
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .hero-strip article {
+    min-height: 94px;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+  }
+
+  .project-layout {
+    gap: 16px;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .project-card.compact {
+    padding: 16px;
+  }
+
+  .project-card.compact p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .education-list {
+    gap: 12px;
+  }
+
+  .education-list article {
+    padding-bottom: 14px;
+  }
+
+  .contact {
+    align-items: center;
+  }
+}
+
 @media (max-width: 1080px) {
   .hero-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
