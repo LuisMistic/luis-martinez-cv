@@ -869,15 +869,10 @@ h3 {
     scroll-margin-top: 96px;
   }
 
-  .hero,
   .section {
-    min-height: calc(100svh - 84px);
-  }
-
-  .section {
-    padding-top: 44px;
-    padding-bottom: 44px;
-    align-content: center;
+    min-height: auto;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .section-heading {
@@ -886,20 +881,6 @@ h3 {
 
   .hero-strip article {
     min-height: 94px;
-  }
-
-  .timeline {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 18px;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--surface);
   }
 
   .project-layout {
@@ -1143,7 +1124,7 @@ h3 {
   z-index: -3;
   border-radius: 34px;
   background:
-    linear-gradient(135deg, rgba(10, 18, 18, 0.99) 0%, rgba(12, 54, 50, 0.96) 38%, rgba(244, 239, 229, 0) 38%),
+    linear-gradient(135deg, rgba(10, 18, 18, 0.995) 0%, rgba(11, 42, 39, 0.985) 48%, rgba(11, 42, 39, 0.86) 64%, rgba(244, 239, 229, 0.08) 80%, rgba(244, 239, 229, 0) 100%),
     radial-gradient(circle at right 18% top 22%, rgba(214, 161, 75, 0.18), rgba(214, 161, 75, 0) 34%);
   box-shadow: 0 28px 90px rgba(10, 18, 18, 0.22);
 }
@@ -1167,6 +1148,17 @@ h3 {
 .portfolio-cv .hero-copy {
   padding: 34px 0 0 34px;
   color: #fff;
+  position: relative;
+}
+
+.portfolio-cv .hero-copy::before {
+  content: "";
+  position: absolute;
+  inset: 8px 44px 10px -18px;
+  z-index: -1;
+  border-radius: 28px;
+  background: linear-gradient(90deg, rgba(9, 18, 18, 0.34), rgba(9, 18, 18, 0.12) 70%, rgba(9, 18, 18, 0));
+  pointer-events: none;
 }
 
 .portfolio-cv .eyebrow {
@@ -1181,7 +1173,7 @@ h3 {
 
 .portfolio-cv .hero-text {
   max-width: 700px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .portfolio-cv .hero-strip {
@@ -1194,15 +1186,15 @@ h3 {
 .portfolio-cv .hero-strip article {
   min-height: 112px;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(8, 20, 20, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 18px;
   backdrop-filter: blur(12px);
 }
 
 .portfolio-cv .strip-label {
   display: block;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -1218,8 +1210,8 @@ h3 {
 }
 
 .portfolio-cv .button.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(8, 20, 20, 0.24);
+  border-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
@@ -1232,13 +1224,13 @@ h3 {
 }
 
 .portfolio-cv .segmented-control {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(8, 20, 20, 0.26);
+  border-color: rgba(255, 255, 255, 0.16);
   box-shadow: 0 10px 24px rgba(10, 18, 18, 0.16);
 }
 
 .portfolio-cv .segment {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .portfolio-cv .segment.is-active {
@@ -1247,8 +1239,8 @@ h3 {
 }
 
 .portfolio-cv .focus-panel {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
-  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(180deg, rgba(8, 20, 20, 0.34), rgba(8, 20, 20, 0.22));
+  border-color: rgba(255, 255, 255, 0.16);
   box-shadow: 0 18px 40px rgba(10, 18, 18, 0.18);
   backdrop-filter: blur(12px);
 }
@@ -1349,12 +1341,16 @@ h3 {
   .portfolio-cv .hero-surface {
     border-radius: 28px;
     background:
-      linear-gradient(180deg, rgba(10, 18, 18, 0.99), rgba(12, 54, 50, 0.95) 64%, rgba(244, 239, 229, 0) 64%),
+      linear-gradient(180deg, rgba(10, 18, 18, 0.99), rgba(12, 54, 50, 0.97) 72%, rgba(244, 239, 229, 0.08) 88%, rgba(244, 239, 229, 0) 100%),
       radial-gradient(circle at right 18% top 22%, rgba(214, 161, 75, 0.18), rgba(214, 161, 75, 0) 34%);
   }
 
   .portfolio-cv .hero-copy {
     padding: 26px 20px 0;
+  }
+
+  .portfolio-cv .hero-copy::before {
+    inset: 6px 12px 10px 0;
   }
 
   .portfolio-cv .hero-panel {
