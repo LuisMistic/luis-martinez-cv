@@ -19,12 +19,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 104px;
+  scroll-padding-top: 118px;
 }
 
 section[id],
 [id="inicio"] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 112px;
 }
 
 body {
@@ -650,6 +650,7 @@ h3 {
 
 .project-support-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
 }
 
 .project-card {
@@ -738,10 +739,12 @@ h3 {
 .project-card h3 {
   margin-top: 14px;
   font-size: 1.35rem;
+  overflow-wrap: anywhere;
 }
 
 .project-card p {
   margin: 12px 0 18px;
+  overflow-wrap: anywhere;
 }
 
 .project-card a {
@@ -856,10 +859,47 @@ h3 {
   margin: 0;
 }
 
+@media (max-width: 1080px) {
+  .hero-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-strip article:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .project-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-support-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timeline-date {
+    font-size: 0.96rem;
+  }
+
+  .project-featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   section[id],
   [id="inicio"] {
-    scroll-margin-top: 88px;
+    scroll-margin-top: 98px;
   }
 
   .menu-button {
@@ -931,11 +971,11 @@ h3 {
 @media (max-width: 640px) {
   section[id],
   [id="inicio"] {
-    scroll-margin-top: 82px;
+    scroll-margin-top: 92px;
   }
 
   html {
-    scroll-padding-top: 86px;
+    scroll-padding-top: 96px;
   }
 
   .nav,
@@ -1206,7 +1246,8 @@ h3 {
 }
 
 .portfolio-cv .project-card.compact {
-  min-height: 214px;
+  min-height: 0;
+  height: 100%;
 }
 
 .portfolio-cv .case-meta div {
@@ -1244,6 +1285,14 @@ h3 {
   .portfolio-cv .hero-panel {
     justify-self: center;
     margin-top: 0;
+  }
+
+  .portfolio-cv .hero-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-cv .hero-strip article:last-child {
+    grid-column: 1 / -1;
   }
 }
 
